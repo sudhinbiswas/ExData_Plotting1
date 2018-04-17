@@ -11,10 +11,10 @@ sub_data <- subset(whole_data, subset=(Date >= "2007-02-01" & Date <= "2007-02-0
 ## Delete the previous raw dataset
 rm(whole_data)
 
-## Converting dates and add time to it 
+## Converting dates and add time data to data_time variable 
 date_time <- paste(as.Date(sub_data$Date), sub_data$Time)
 
-## Create new variable name as Datetime and put it to sub_data dataset. 
+## Create new variable name as Datetime and put date_time data to sub_data dataset under Datetime variable 
 sub_data$Datetime <- as.POSIXct(date_time)
 
 ## creating Plot-1
