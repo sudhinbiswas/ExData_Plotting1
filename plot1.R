@@ -17,7 +17,8 @@ date_time <- paste(as.Date(sub_data$Date), sub_data$Time)
 ## Create new variable name as Datetime and put date_time data to sub_data dataset under Datetime variable 
 sub_data$Datetime <- as.POSIXct(date_time)
 
-## creating Plot-1
+## creating Plot-1 with transparent Background
+par(bg = "transparent")
 hist(sub_data$Global_active_power, main="Global Active Power", 
      xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
 
